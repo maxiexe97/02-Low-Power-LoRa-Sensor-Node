@@ -220,12 +220,3 @@ This node is the data source at the start of the portfolio's telemetry pipeline:
 
 ---
 
-## Security Note — Action Needed Before Publishing
-
-While preparing this README, a screenshot in `docs/images/draginoConfigMQTT.png` was found to expose the **real public IP address and port of the MQTT broker** (in plain text, over unencrypted MQTT — no TLS, no visible authentication). This image is referenced in an earlier version of this README's "Gateway Integration" section.
-
-Before pushing this repository (or if it has already been pushed):
-
-1. **Remove `docs/images/draginoConfigMQTT.png`** from the repository, or replace it with a screenshot where the Broker Address and Port fields are blacked out.
-2. **If this repository is already public on GitHub**, deleting the file in a new commit is not enough — the image remains in git history. Either scrub it from history (e.g. `git filter-repo` / BFG Repo-Cleaner) or, more simply and more importantly, **treat the broker as exposed**: consider it discoverable regardless of the repo, and prioritize putting it behind TLS with authentication (or a firewalled/VPN-only endpoint) rather than relying on the address staying secret.
-3. As a secondary, lower-severity item: `docs/images/draginoLOG.png` shows the gateway's device ID (`gatewayID=a840411f69b44150`). This is a device identifier rather than a credential, but if you'd rather not publish it, crop or blur that line before committing.
