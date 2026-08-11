@@ -1,35 +1,3 @@
-# 02-Low-Power-LoRa-Sensor-Node
-
-## Overview
-
-Development of a low-power embedded sensor node for periodic acquisition and wireless transmission of field data using LoRa.
-
-The project involved the design and integration of the embedded system, including sensor acquisition, LoRa communication, real-time clock management and low-power operation.
-
-The node was later integrated into a larger industrial telemetry platform and used as a data source for a transformer digital model.
-
-```text
-low-power-lora-sensor-node/
-│
-├── README.md
-│
-├── firmware/
-│   ├── main.c
-│   ├── sx1276.c
-│   ├── sx1276.h
-│   └── ...
-│
-├── hardware/
-│   ├── photos/
-│   └── diagrams/
-│
-├── gateway/
-│   └── README.md
-│
-└── docs/
-    └── ...
-```
-
 # Low-Power LoRa Sensor Node
 
 ## Overview
@@ -38,7 +6,9 @@ Development of a low-power embedded sensor node for periodic acquisition and wir
 
 The project was developed by reprogramming a commercial Dragino sensor platform based on an STM32L072 microcontroller and an SX1276 LoRa transceiver. The original firmware was replaced with custom firmware to implement sensor acquisition, battery monitoring, LoRa communication, real-time clock management and low-power operation.
 
-![Opened Dragino sensor platform](docs/images/sensorLTH65.png)
+
+<img src="docs/images/sensorLTH65.png" alt="Opened Dragino sensor" width="600">
+<img src="" alt="" width="600">
 
 *Original commercial sensor platform showing the embedded electronics.*
 
@@ -88,8 +58,8 @@ The resulting node was later integrated into a larger industrial telemetry platf
 * **Real-time clock:** STM32 internal RTC
 * **Battery monitoring:** ADC using internal voltage reference (VREFINT)
 
-![Sensor board](docs/images/sensor01.jpeg)
-![Sensor board](docs/images/sensor02.jpeg)
+<img src="docs/images/sensor01.jpeg" alt="Sensor board" width="600">
+<img src="docs/images/sensor02.jpeg" alt="Sensor board" width="600">
 
 *Sensor node hardware and main components.*
 
@@ -176,8 +146,18 @@ Data Storage / Processing
 ```
 
 ![Node-RED MQTT flow](docs/images/flow-nodeRED01.png)
-
 *Telemetry data flow from MQTT through Node-RED.*
+
+
+<img src="docs/images/debugNODERED01.png" width="600">
+
+*Data from MQTT through Node-RED-debug.*
+
+
+<img src="docs/images/debugNODERED02.png" width="600">
+
+*Dashboard*
+
 
 ## Technologies
 
