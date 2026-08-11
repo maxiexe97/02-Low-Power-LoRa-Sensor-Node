@@ -88,8 +88,8 @@ The resulting node was later integrated into a larger industrial telemetry platf
 * **Real-time clock:** STM32 internal RTC
 * **Battery monitoring:** ADC using internal voltage reference (VREFINT)
 
-![Sensor board](docs\images\sensor01.jpeg)
-![Sensor board](docs\images\sensor02.jpeg)
+![Sensor board](docs/images/sensor01.jpeg)
+![Sensor board](docs/images/sensor02.jpeg)
 
 *Sensor node hardware and main components.*
 
@@ -117,7 +117,7 @@ The firmware configures the radio for operation at **915 MHz** using:
 
 The transmission process writes the telemetry payload to the SX1276 FIFO, starts transmission and waits for the **TxDone** interrupt before returning the radio to sleep mode.
 
-![LoRa reception log](docs\images\draginoLOG.png)
+![LoRa reception log](docs/images/draginoLOG.png)
 
 *Example of LoRa packets received from the custom sensor node.*
 
@@ -155,7 +155,7 @@ The sensor node was integrated with a **Dragino LG02** gateway for LoRa receptio
 
 The gateway received the LoRa transmissions from the sensor node and forwarded the resulting data through the MQTT infrastructure.
 
-![Dragino LG02 configuration](docs\images\draginoConfigMQTT.png)
+![Dragino LG02 configuration](docs/images/draginoConfigMQTT.png)
 
 *Dragino LG02 configuration used for LoRa reception and data forwarding.*
 
@@ -175,7 +175,7 @@ Dragino LG02
 Data Storage / Processing
 ```
 
-![Node-RED MQTT flow](docs\images\flow-nodeRED01.png)
+![Node-RED MQTT flow](docs/images/flow-nodeRED01.png)
 
 *Telemetry data flow from MQTT through Node-RED.*
 
