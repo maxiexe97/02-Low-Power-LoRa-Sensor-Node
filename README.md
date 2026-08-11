@@ -38,7 +38,7 @@ Development of a low-power embedded sensor node for periodic acquisition and wir
 
 The project was developed by reprogramming a commercial Dragino sensor platform based on an STM32L072 microcontroller and an SX1276 LoRa transceiver. The original firmware was replaced with custom firmware to implement sensor acquisition, battery monitoring, LoRa communication, real-time clock management and low-power operation.
 
-![Opened Dragino sensor platform](docs\images\sensorLTH65.png)
+![Opened Dragino sensor platform](docs/images/sensorLTH65.png)
 
 *Original commercial sensor platform showing the embedded electronics.*
 
